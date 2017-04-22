@@ -1,3 +1,25 @@
 // Place all the styles related to the checklist controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.mdl-card {
+  &.questionaire-card {
+    width: 100%;
+  }
+  .question-card-body {
+    padding: 16px;
+    .question {
+      margin-bottom: 30px;
+      .text {
+        font-size: 18px;
+      }
+      .mdl-radio {
+        margin-right: 25px;
+        font-size: 12px;
+      }
+    }
+  }
+}
+.score-display {
+  font-size: 24px;
+}

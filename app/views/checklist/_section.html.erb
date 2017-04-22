@@ -1,0 +1,40 @@
+<div class="mdl-cell mdl-cell--8-col mdl-cell--2-offset">
+  <div class="mdl-card questionaire-card mdl-shadow--2dp">
+    <div class="mdl-card__title">
+      <h2 class="mdl-card__title-text"><%= title %></h2>
+    </div>
+    <div class="mdl-card__supporting-text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Mauris sagittis pellentesque lacus eleifend lacinia...
+    </div>
+    <div class="question-card-body">
+      <% questions.each do |question| -%>
+          <div class="question">
+            <p class="text">
+              <%= question.text %>
+            </p>
+            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option1-<%= question.number %>">
+              <input value="0" checked="checked" type="radio" id="option1-<%= question.number %>" name="question-<%= question.number %>" class="mdl-radio__button" >
+              <span class="mdl-radio__label">Not at all</span>
+            </label>
+            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option2-<%= question.number %>">
+              <input value="1" type="radio" id="option2-<%= question.number %>" name="question-<%= question.number %>" class="mdl-radio__button" >
+              <span class="mdl-radio__label">Somewhat</span>
+            </label>
+            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option3-<%= question.number %>">
+              <input value="2" type="radio" id="option3-<%= question.number %>" name="question-<%= question.number %>" class="mdl-radio__button" >
+              <span class="mdl-radio__label">Moderately</span>
+            </label>
+            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option4-<%= question.number %>">
+              <input value="3" type="radio" id="option4-<%= question.number %>" name="question-<%= question.number %>" class="mdl-radio__button" >
+              <span class="mdl-radio__label">A lot</span>
+            </label>
+            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option5-<%= question.number %>">
+              <input value="4" type="radio" id="option5-<%= question.number %>" name="question-<%= question.number %>" class="mdl-radio__button" >
+              <span class="mdl-radio__label">Extremely</span>
+            </label>
+          </div>
+      <% end -%>
+    </div>
+  </div>
+</div>
